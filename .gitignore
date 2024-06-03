@@ -1,0 +1,35 @@
+# Visual Studio Code тимчасові файли
+.vscode/
+
+# Тимчасові файли, які генерує MSBuild
+bin/
+obj/
+
+# Кеш та тимчасові файли NuGet
+*.nuget.props
+*.paket.*
+*.paket/
+packages/
+*.nupkg
+**/bin/**/
+**/obj/**/
+
+# Local application-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# ReSharper тимчасові файли
+_ReSharper*/
+*.resharper
+*.ReSharper*/
+
+# Rider тимчасові файли та файли власного вигляду
+.idea/
+*.sln.iml
+
+# Coverlet покриття коду
+coverage*/
+*.opencover.xml
+*.coverage
