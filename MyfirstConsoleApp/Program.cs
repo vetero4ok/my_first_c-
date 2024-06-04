@@ -18,8 +18,10 @@ namespace MyTest
             // linked.
             
     
-            // Robot bot = new Robot("bot", 65, new byte[] { 0, 0 });
-            // Console.WriteLine(bot);
+            Robot bot = new Robot("bot", 65, new byte[] { 0, 0 });
+            bot.Name = "Ivan";
+            
+            Console.WriteLine(bot.Name);
         }
 
         public static void DoConvertsTest()
