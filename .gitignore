@@ -33,3 +33,7 @@ _ReSharper*/
 coverage*/
 *.opencover.xml
 *.coverage
+
+# debug files
+*.sln
+*.editorconfig
