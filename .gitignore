@@ -37,3 +37,4 @@ coverage*/
 # debug files
 *.sln
 *.editorconfig
+*.txt

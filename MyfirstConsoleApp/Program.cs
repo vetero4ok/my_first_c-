@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Buffers.Binary;
+using System.IO;
 // using static LinkenListMethods;
 
 
@@ -9,7 +10,8 @@ class Hello
     static void Main()
     {
         // DoConvertsTest();
-        DoStringTests();
+        // DoStringTests();
+        ReadAndWrite();
 
         //    LinkenListMethods linked =  new LinkenListMethods();
         //    linked.ToDoLinkTest();
@@ -96,9 +98,31 @@ class Hello
 
     }
 
+    public static void ReadAndWrite()
+    {
+        // Console.WriteLine("Enter text");
+        // string input = Console.ReadLine();
+        // using (FileStream stream = new FileStream("info.txt", FileMode.OpenOrCreate))
+        // {
+        //     byte[] TextOnByte = System.Text.Encoding.Default.GetBytes(input);
+        //     stream.Write(TextOnByte);
+        // }
+
+
+
+        using (FileStream stream = File.OpenRead("info.txt"))
+        {
+            byte[] written = new byte[stream.Length];
+            stream.Read(written);
+            string textFromFile = System.Text.Encoding.Default.GetString(written);
+            Console.WriteLine(textFromFile);
+        }
+
+    }
+
     public static string ArrayToString(string[] arg)
     {
-        return String.Join("", arg);;
+        return String.Join("", arg);
     }
 
 
