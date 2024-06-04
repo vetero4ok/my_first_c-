@@ -14,8 +14,8 @@ namespace MyTest
             // ReadAndWrite();
 
 
-            LinkenListMethods linked = new LinkenListMethods();
-            linked.
+            // LinkenListMethods linked = new LinkenListMethods();
+            // linked.
             
     
             // Robot bot = new Robot("bot", 65, new byte[] { 0, 0 });
