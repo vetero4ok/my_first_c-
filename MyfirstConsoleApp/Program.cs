@@ -12,16 +12,28 @@ namespace MyTest
             // DoConvertsTest();
             // DoStringTests();
             // ReadAndWrite();
+            DoWithClass();
 
 
-            // LinkenListMethods linked = new LinkenListMethods();
-            // linked.
-            
-    
+
+
+
+
+        }
+        public static void DoWithClass()
+        {
             Robot bot = new Robot("bot", 65, new byte[] { 0, 0 });
             bot.Name = "Ivan";
-            
+            Console.WriteLine(bot.Size);
+            bot.Size = 55;
+            Console.WriteLine(bot.Size);
+            ChildRobot child = new ChildRobot("bot", 65, new byte[] { 1, 0 }, 6666);
             Console.WriteLine(bot.Name);
+            Console.WriteLine(child.Damage);
+
+            // Console.WriteLine(ArrayToString(new List<object>() { bot.Cordinates }));
+            // Console.WriteLine(ArrayToString(new List<object>() { child.Cordinates }));
+
         }
 
         public static void DoConvertsTest()
@@ -100,7 +112,7 @@ namespace MyTest
             // return  0 =  complete match, -1 less text, 1 more text
             string[] letters = word.Split(' ', ',');
             Console.WriteLine("______");
-            Console.WriteLine(ArrayToString(letters));
+            Console.WriteLine(ArrayToString(new List<object>(letters)));
 
         }
 
@@ -126,9 +138,9 @@ namespace MyTest
 
         }
 
-        public static string ArrayToString(string[] arg)
+        public static string ArrayToString(List<object> arg)
         {
-            return String.Join("", arg);
+            return String.Join("", arg.Select(value => value.ToString()).ToArray());
         }
 
 

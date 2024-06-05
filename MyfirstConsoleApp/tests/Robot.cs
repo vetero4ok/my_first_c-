@@ -13,12 +13,13 @@ class Robot
     public Robot(string name, int size, byte[] cordinates)
     {
         this.name = name;
-        this.size = size; ;
+        this.size = size;
         this.cordinates = cordinates;
     }
 
     public string Name
     {
+
         get { return name; }
         set
         {
@@ -30,7 +31,17 @@ class Robot
             name = value;
         }
     }
-    public int Size { get; set; }
+    public int Size
+    {
+        get
+        {
+            return this.size;
+        }
+        set
+        {
+            this.size = value;
+        }
+    }
     public byte[] Cordinates
     {
         get
