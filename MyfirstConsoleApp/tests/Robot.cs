@@ -52,5 +52,18 @@ class Robot
         set { }
     }
 
+    public virtual void printValues()
+    {
+        Console.WriteLine("Name " + this.Name);
+        Console.WriteLine("Size " + this.Size);
+        Console.Write("Cordinates : ");
+        foreach (byte point in cordinates)
+        {
+            Console.Write(" " + point + " ");
+        }
+        Console.Write("\n");
+    }
+
+
 
 }

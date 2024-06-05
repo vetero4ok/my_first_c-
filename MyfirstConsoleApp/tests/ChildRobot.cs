@@ -12,5 +12,11 @@ class ChildRobot : Robot
         this.Damage = damage;
     }
 
+    public override void printValues()
+    {
+        base.printValues();
+        Console.WriteLine("\nDamage: "+ this.Damage);
+    }
+
 
 }

@@ -26,10 +26,12 @@ namespace MyTest
             bot.Name = "Ivan";
             Console.WriteLine(bot.Size);
             bot.Size = 55;
-            Console.WriteLine(bot.Size);
+            // Console.WriteLine(bot.Size);
             ChildRobot child = new ChildRobot("bot", 65, new byte[] { 1, 0 }, 6666);
-            Console.WriteLine(bot.Name);
-            Console.WriteLine(child.Damage);
+            // Console.WriteLine(bot.Name);
+            // Console.WriteLine(child.Damage);
+            bot.printValues();
+            child.printValues();
 
             // Console.WriteLine(ArrayToString(new List<object>() { bot.Cordinates }));
             // Console.WriteLine(ArrayToString(new List<object>() { child.Cordinates }));
