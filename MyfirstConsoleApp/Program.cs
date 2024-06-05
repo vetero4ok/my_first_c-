@@ -22,16 +22,18 @@ namespace MyTest
         }
         public static void DoWithClass()
         {
-            Robot bot = new Robot("bot", 65, new byte[] { 0, 0 });
+            Robot bot = new Bot("bot", 65, new byte[] { 0, 0 });
             bot.Name = "Ivan";
             Console.WriteLine(bot.Size);
             bot.Size = 55;
             // Console.WriteLine(bot.Size);
-            ChildRobot child = new ChildRobot("bot", 65, new byte[] { 1, 0 }, 6666);
+            ChildRobot child = new ChildRobot("Igor", 65, new byte[] { 1, 0 }, 6666);
             // Console.WriteLine(bot.Name);
             // Console.WriteLine(child.Damage);
             bot.printValues();
             child.printValues();
+            bot.Moving(15);
+            child.Moving(10);
 
             // Console.WriteLine(ArrayToString(new List<object>() { bot.Cordinates }));
             // Console.WriteLine(ArrayToString(new List<object>() { child.Cordinates }));

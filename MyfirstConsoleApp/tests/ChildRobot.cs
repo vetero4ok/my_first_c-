@@ -15,7 +15,12 @@ class ChildRobot : Robot
     public override void printValues()
     {
         base.printValues();
-        Console.WriteLine("\nDamage: "+ this.Damage);
+        Console.Write("Damage: "+ this.Damage + "\n");
+    }
+
+    public override void Moving(byte speed)
+    {
+        Console.WriteLine("Child is moving " + speed);
     }
 
 

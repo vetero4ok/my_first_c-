@@ -3,11 +3,13 @@ using System;
 
 namespace MyTest;
 
-class Robot
+abstract class Robot
 {
     private string name;
     private int size;
     private byte[] cordinates;
+
+    public abstract void Moving(byte speed);
 
 
     public Robot(string name, int size, byte[] cordinates)
